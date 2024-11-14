@@ -1,0 +1,17 @@
+* {
+    font-family: sans-serif;
+}
+
+.a:hover:not(.active) {
+    background-color: #5560f8;
+}
+
+.a .active {
+   background-color: #5560f8;
+}
+
+.canvasjs-chart-container {
+    background-color: #f8f9fb;
+}
+
+/* style="background-color: #ecf1f9"*/
