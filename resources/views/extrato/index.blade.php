@@ -34,10 +34,10 @@
                     <label for="validationCustom04" class="form-label"><strong>Conta</strong></label>
                 </div>
                 <div class="col-md-3">
-                    <label for="validationCustom04" class="form-label"><strong>Credito</strong></label>
+                    <label for="validationCustom04" class="form-label"><strong>Debito</strong></label>
                 </div>
                 <div class="col-md-3">
-                    <label for="validationCustom04" class="form-label"><strong>Debito</strong></label>
+                    <label for="validationCustom04" class="form-label"><strong>Credito</strong></label>
                 </div>
             </div>
         </div>
@@ -59,11 +59,12 @@
                                         {{ $result->expenseAccount ? $result->expenseAccount->expense_account_name : '' }}
                                     </label>
                                 </div>
-                                <div class="col-md-3">
-                                    <label for="validationCustom04" class="form-label" style="color: blue">{{ $result->value_received }}</label>
-                                </div>
+                                
                                 <div class="col-md-3">
                                     <label for="validationCustom04" class="form-label" style="color: brown">{{ $result->expense_amount }}</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom04" class="form-label" style="color: blue">{{ $result->value_received }}</label>
                                 </div>
                             </div>
                         </li>
@@ -77,11 +78,13 @@
                             <div class="col-md-6">
                                 <label for="validationCustom04" class="form-label"><strong>Total</strong></label>
                             </div>
-                            <div class="col-md-3">
-                                <label for="validationCustom04" class="form-label"><strong style="color: blue">{{ $revenueTotal }}</strong></label>
-                            </div>
+                            
                             <div class="col-md-3">
                                 <label for="validationCustom04" class="form-label"><strong style="color: brown">{{ $expenseTotal }}</strong></label>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="validationCustom04" class="form-label"><strong style="color: blue">{{ $revenueTotal }}</strong></label>
                             </div>
                         </div>
                         <hr>

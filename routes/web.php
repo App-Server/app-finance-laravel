@@ -7,6 +7,9 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\RevenueController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\AccountsController;
+use App\Http\Controllers\AdjustmentsCorrectionsController;
+use App\Http\Controllers\AdjustmentsCorrectionsExpenseController;
+use App\Http\Controllers\AdjustmentsCorrectionsRevenueController;
 use App\Http\Controllers\CreateExpenseAccountController;
 use App\Http\Controllers\CreateRevenueAccountController;
 use App\Http\Controllers\ExpenseComment;
@@ -54,5 +57,11 @@ Route::middleware([ 'middleware' => 'auth'])->group(function () {
 
     Route::get('extrato', [ExtratoController::class, 'index'])->name('extrato.index');
     Route::post('extrato', [ExtratoController::class, 'search'])->name('extrato.search');
+
+    Route::get('/adjustments-corrections', [AdjustmentsCorrectionsController::class, 'index'])->name('adjustments-corrections.index');
+
+    Route::get('adjustments-corrections-expense', [AdjustmentsCorrectionsExpenseController::class, 'index'])->name('adjustments-corrections-expense.index');
+
+    Route::get('adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'index'])->name('adjustments-corrections-revenue.index');
 
 });

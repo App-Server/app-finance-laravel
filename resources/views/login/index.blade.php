@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="manifest" href="/manifest.json">
 </head>
-<body style="background-color: #f1f2f5">
+<body style="background-color: #f5f6ff">
 
     <div class="container">
         <div class="login-layout">

@@ -9,7 +9,7 @@
     <link rel="manifest" href="/manifest.json">
     <title>{{ $title ?? 'Default Title' }}</title>
 </head>
-<body style="background-color: #f1f2f5">
+<body style="background-color: #f5f6ff">
     
     <nav class="navbar navbar-expand-lg bg-body fixed-top" >
         <div class="container">
@@ -46,6 +46,9 @@
                 <ul class="dropdown-menu">
                   <li class="nav-item">
                     <a class="dropdown-item" href="{{url('/user')}}" {{ Request::is('user') ? 'active' : '' }}>Usuários</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item" href="{{url('/adjustments-corrections')}}" {{ Request::is('adjustments-corrections') ? 'active' : '' }}>Ajustes e Correções</a>
                   </li>
                   <li><a href="{{ url('/login') }}" class="dropdown-item">Sair</a></li>
                 </ul>
