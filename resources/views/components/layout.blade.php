@@ -9,7 +9,7 @@
     <link rel="manifest" href="/manifest.json">
     <title>{{ $title ?? 'Default Title' }}</title>
 </head>
-<body style="background-color: #f5f6ff">
+<body style="background-color: #f1f2f5">
     
     <nav class="navbar navbar-expand-lg bg-body fixed-top" >
         <div class="container">
@@ -59,6 +59,7 @@
     </nav>
 
     <div class="container" style="margin-top: 90px">
+        @vite('resources/js/app.js', 'resources/css/app.js')
         {{$slot}}
     </div>
 

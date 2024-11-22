@@ -55,13 +55,14 @@ Route::middleware([ 'middleware' => 'auth'])->group(function () {
     Route::get('/expense/{id}/expense-comment', [ExpenseComment::class, 'index'])->name('expense-comment.index');
     Route::post('/expense/{id}/expense-comment', [ExpenseComment::class, 'store'])->name('expense-comment.store');
 
-    Route::get('extrato', [ExtratoController::class, 'index'])->name('extrato.index');
-    Route::post('extrato', [ExtratoController::class, 'search'])->name('extrato.search');
+    Route::get('/extrato', [ExtratoController::class, 'index'])->name('extrato.index');
+    Route::post('/extrato', [ExtratoController::class, 'search'])->name('extrato.search');
 
     Route::get('/adjustments-corrections', [AdjustmentsCorrectionsController::class, 'index'])->name('adjustments-corrections.index');
 
-    Route::get('adjustments-corrections-expense', [AdjustmentsCorrectionsExpenseController::class, 'index'])->name('adjustments-corrections-expense.index');
+    Route::get('/adjustments-corrections-expense', [AdjustmentsCorrectionsExpenseController::class, 'index'])->name('adjustments-corrections-expense.index');
 
-    Route::get('adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'index'])->name('adjustments-corrections-revenue.index');
+    Route::get('/adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'index'])->name('adjustments-corrections-revenue.index');
+    Route::post('/adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'search'])->name('adjustments-corrections-revenue.search');
 
 });

@@ -1,6 +1,7 @@
 <x-layout title="Ajustes e Correçõe de Despesas">
     <h5>Ajustes e Correções de Despesas</h5>
-    <a href="{{ url('/adjustments-corrections') }}">Volta</a>
+    <a href="{{ url('/adjustments-corrections') }}" class="btn btn-info">Volta</a>
+    <br><br>
     <div class="alert alert-primary" role="alert">
         A simple primary alert—check it out!
     </div>
