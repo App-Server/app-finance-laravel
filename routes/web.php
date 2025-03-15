@@ -25,6 +25,10 @@ Route::post('/login/auth', [LoginController::class, 'auth'])->name('login.auth')
 
 Route::middleware([ 'middleware' => 'auth'])->group(function () {
 
+    Route::get('/', function () {
+        return view('login.index');
+    });
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::post('/dashboard', [DashboardController::class, 'search'])->name('dashboard.search');
 
@@ -62,7 +66,7 @@ Route::middleware([ 'middleware' => 'auth'])->group(function () {
 
     Route::get('/adjustments-corrections-expense', [AdjustmentsCorrectionsExpenseController::class, 'index'])->name('adjustments-corrections-expense.index');
 
+    Route::get('/adjustments-corrections-revenue/{id}', [AdjustmentsCorrectionsRevenueController::class, 'edit'])->name('adjustments-corrections-revenue                  .edit');
     Route::get('/adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'index'])->name('adjustments-corrections-revenue.index');
-    Route::post('/adjustments-corrections-revenue', [AdjustmentsCorrectionsRevenueController::class, 'search'])->name('adjustments-corrections-revenue.search');
 
 });

@@ -59,7 +59,6 @@
     </nav>
 
     <div class="container" style="margin-top: 90px">
-        @vite('resources/js/app.js', 'resources/css/app.js')
         {{$slot}}
     </div>
 
